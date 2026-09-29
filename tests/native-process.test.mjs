@@ -94,8 +94,12 @@ test('audio status is inert and cancellation of an unknown stream is rejected', 
     frame({ ...request('cancel', 'cancelAudio'), params: { streamId: 1 } })]));
   assert.equal(messages.length, 2); assert.equal(messages[0].ok, true);
   assert.deepEqual(Object.keys(messages[0].result).sort(), ['active', 'permission', 'reason']);
-  assert.equal(messages[0].result.active, false); assert.equal(messages[0].result.reason, null);
-  assert.ok(['granted', 'denied', 'restricted', 'notDetermined', 'systemManaged'].includes(messages[0].result.permission));
+  const { active, permission, reason } = messages[0].result;
+  assert.equal(active, false);
+  assert.ok(['granted', 'denied', 'restricted', 'notDetermined', 'systemManaged'].includes(permission));
+  // Windows reports an existing OS access denial without opening the microphone.
+  const accessDenied = process.platform === 'win32' && ['denied', 'restricted'].includes(permission);
+  assert.equal(reason, accessDenied ? 'AUDIO_PERMISSION_REQUIRED' : null);
   assert.deepEqual(messages[1], { v: 1, id: 'cancel', ok: false, error: 'AUDIO_INVALID_STATE' });
 });
 
