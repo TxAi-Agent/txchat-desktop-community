@@ -1,0 +1,19 @@
+.tx-hud{position:relative;width:360px;height:80px;overflow:hidden;border-radius:18px;background:linear-gradient(to right,#252422,#171615);color:#fbfaf8;font-family:system-ui,sans-serif;box-shadow:inset 0 0 0 1px #3e3a36}
+.tx-hud-logo{position:absolute;left:10px;top:12px;width:56px;height:56px;background:url('./product/assets/TxChat-HUD-High-Contrast.svg') center/contain no-repeat}
+.tx-hud-dot{position:absolute;left:77px;top:28px;width:6px;height:6px;border-radius:50%;background:var(--hud-status);box-shadow:0 0 5px color-mix(in srgb,var(--hud-status) 50%,transparent)}
+.tx-hud-copy{position:absolute;left:90px;top:23.5px;width:188px;display:flex;flex-direction:column;gap:5.5px}
+.tx-hud-copy strong,.tx-hud-copy small{display:block;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:1.2}
+.tx-hud-copy strong{font-size:13px;font-weight:500}.tx-hud-copy small{font-size:11px;font-weight:400;color:#a9a29a}
+.tx-hud-cancelled .tx-hud-copy{left:89px}.tx-hud-cancelled .tx-hud-dot{left:76px;top:27px}
+.tx-hud-wave{position:absolute;left:281px;top:23px;width:58px;height:32px;display:flex;align-items:center;justify-content:center;gap:5px}
+.tx-hud-listening .tx-hud-wave{top:24px}.tx-hud-wave.tx-hud-wave-compact{left:273px;top:24px;width:32px;gap:4px}
+.tx-hud-wave i{display:block;flex:0 0 2px;border-radius:1px;background:#d8b19b}.tx-hud-listening .tx-hud-wave i{transition:height 50ms ease-out}
+.tx-hud-cancel{position:absolute;left:317px;top:23px;width:32px;height:32px;padding:4px;display:grid;place-items:center;background:transparent;border:0;cursor:pointer}
+.tx-hud-cancel span{box-sizing:border-box;width:24px;height:24px;display:grid;place-items:center;border-radius:50%;border:1px solid #ded8d0;background:#fffcf8;color:#171615;font:500 13px system-ui,sans-serif}
+.tx-hud-cancel:focus-visible{outline:0;outline-offset:-2px;border-radius:50%}
+.tx-hud-has-action .tx-hud-dot{left:76px;top:27px}.tx-hud-has-action .tx-hud-copy{left:89px}
+.tx-hud-action{position:absolute;left:293px;top:28px;width:46px;height:28px;padding:0;border:0;border-radius:7px;background:rgb(120 115 110 / 40%);color:#f0eeeb;font:500 12px system-ui,sans-serif;cursor:pointer}.tx-hud-action:focus-visible{outline:0;outline-offset:2px}
+.tx-hud-badge{position:absolute;left:317px;top:28px;box-sizing:border-box;width:22px;height:22px;border-radius:50%;border:1px solid #e5ded6;background:#fffcf8;display:grid;place-items:center;box-shadow:0 2px 5px #6f665e29}
+.tx-hud-badge svg{width:12px;height:12px;fill:none;stroke:#2f8a4c;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}.tx-hud-badge i{width:6px;height:6px;border-radius:50%;background:#c94a45}
+.tx-hud-no-speech .tx-hud-badge i{background:var(--hud-status)}
+@media(prefers-reduced-motion:reduce){.tx-hud-listening .tx-hud-wave i{transition:none}}

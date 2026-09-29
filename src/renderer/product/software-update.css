@@ -1,0 +1,24 @@
+.tx-product .tx-modal-update { position: relative; flex-shrink: 0; width: 560px; height: 360px; max-height: none; padding: 0; overflow: hidden; display: block; border: 0; border-radius: 16px; background: #fbfaf8; color: #111; --update-secondary: #707070; --update-raised: #fffcf8; --update-border: #ded8d0; --update-danger: #c94a45; --update-traffic: #c7c2bab8; --update-track: #e7d1c58c; --update-inverse: #171615; --update-on-inverse: #fbfaf8; }
+.tx-product.tx-dark .tx-modal-update { background: #171615; color: #fbfaf8; --update-secondary: #a9a29a; --update-raised: #211f1d; --update-border: #3a3733; --update-danger: #e1736e; --update-traffic: #5c5854b8; --update-track: #59483fb3; --update-inverse: #fffcf8; --update-on-inverse: #111; }
+.tx-modal-update .tx-modal-heading { position: absolute; left: 96px; top: 44px; padding: 0; width: 432px; height: 35px; margin: 0; }
+.tx-product .tx-modal-update .tx-modal-heading h2 { font-size: 23px; font-weight: 700; line-height: 35px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.tx-product .tx-modal-update .tx-modal-body { position: absolute; inset: 0; padding: 0; margin: 0; max-height: none; overflow: visible; }
+.tx-update-traffic { position: absolute; left: 18px; top: 20px; display: flex; gap: 8px; }.tx-update-traffic i { width: 12px; height: 12px; background: var(--update-traffic); border-radius: 50%; }
+.tx-update-brand { position: absolute; left: 32px; top: 46px; width: 48px; height: 48px; }.tx-update-brand .tx-brand-symbol { width: 48px; height: 48px; }
+.tx-product .tx-update-version { position: absolute; left: 96px; top: 81px; width: 432px; height: 23px; margin: 0; font-size: 15px; line-height: 23px; color: var(--update-secondary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.tx-update-card { position: absolute; left: 32px; top: 126px; width: 496px; height: 130px; padding: 19px; border: 0; box-shadow: inset 0 0 0 1px var(--update-border); border-radius: 14px; background: var(--update-raised); }
+.tx-update-card.is-danger { box-shadow: inset 0 0 0 1px var(--update-danger); }.tx-update-card.is-danger h3 { color: var(--update-danger); }
+.tx-product .tx-update-card h3 { font-size: 17px; font-weight: 500; height: 26px; line-height: 26px; }
+.tx-update-download { display: flex; justify-content: space-between; margin-top: 10px; height: 23px; font-size: 15px; line-height: 23px; color: var(--update-secondary); }
+.tx-update-progress { height: 10px; margin-top: 15px; border-radius: 5px; background: var(--update-track); overflow: hidden; }.tx-update-progress i { display: block; height: 10px; background: #c99579; border-radius: 5px; }
+.tx-product .tx-update-description { font-size: 15px; line-height: 23px; height: 23px; margin-top: 10px; color: var(--update-secondary); overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.tx-product .tx-update-caption { font-size: 12px; line-height: 20px; height: 20px; margin-top: 15px; color: var(--update-secondary); overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+.tx-product[lang="en"] .tx-update-description { height: 46px; margin-top: 6px; white-space: normal; }.tx-product[lang="en"] .tx-update-caption { margin-top: 6px; }
+.tx-update-notes { height: 75px; margin-top: 7px; overflow-y: auto; }.tx-product .tx-update-notes p { height: 23px; line-height: 23px; margin: 0 0 7px; font-size: 15px; color: var(--update-secondary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.tx-product .tx-modal-update .tx-modal-footer { position: absolute; left: 32px; top: 282px; width: 496px; height: 44px; margin: 0; padding: 0; gap: 12px; display: flex; justify-content: flex-end; border: 0; }
+.tx-product .tx-modal-update .tx-modal-footer button { width: 116px; height: 44px; min-height: 44px; flex-shrink: 0; padding: 0; border: 1px solid var(--update-border); border-radius: 11px; font-size: 14px; font-weight: 500; background: var(--update-raised); color: inherit; }
+.tx-product .tx-modal-update .tx-modal-footer button.tx-primary { border: 0; background: var(--update-inverse); color: var(--update-on-inverse); }.tx-product .tx-modal-update .tx-modal-footer button.tx-update-restart { width: 154px; }
+.tx-product .tx-modal-update .tx-modal-footer button:disabled { opacity: .42; }.tx-product .tx-modal-update .tx-modal-footer button:hover:not(:disabled) { filter: none; }
+body:has(.tx-update-window) { background: transparent; }.tx-product.tx-update-window { width: 560px; height: 360px; background: transparent; }
+.tx-update-window .tx-modal-layer { position: absolute; inset: 0; width: 560px; height: 360px; padding: 0; background: transparent; backdrop-filter: none; }
+.tx-update-window .tx-modal-update .tx-modal-heading, .tx-update-window .tx-update-version, .tx-update-window .tx-update-brand, .tx-update-window .tx-update-traffic { -webkit-app-region: drag; }

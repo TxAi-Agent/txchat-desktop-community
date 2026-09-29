@@ -1,0 +1,19 @@
+body:has(.tx-fallback-window) { background: transparent; }
+.tx-product.tx-fallback-window { width: 480px; height: 300px; border-radius: 18px; }
+.tx-fallback { position: relative; width: 480px; height: 300px; border-radius: 18px; box-shadow: inset 0 0 0 1px var(--tx-border); }
+.tx-fallback-brand { position: absolute; left: 20px; top: 20px; width: 56px; height: 56px; -webkit-app-region: drag; }
+.tx-product .tx-fallback h1 { position: absolute; left: 82px; top: 32px; width: 372px; height: 32px; font-size: 23px; line-height: 32px; font-weight: 700; -webkit-app-region: drag; }
+.tx-fallback-text { position: absolute; left: 26px; top: 86px; width: 428px; height: 130px; padding: 7px 15px 11px; overflow: auto; white-space: pre-wrap; overflow-wrap: anywhere; user-select: text; font-size: 14px; line-height: 25px; color: var(--tx-secondary); background: var(--tx-canvas); border: 1px solid var(--tx-border); border-radius: 14px; box-shadow: 0 3px 5px #0000000d; }
+.tx-fallback-text:focus-visible { outline: 0; }
+.tx-product .tx-fallback-close:focus-visible[data-auto-focus] { outline: 0; }
+.tx-product .tx-fallback button { position: absolute; top: 240px; height: 42px; min-height: 42px; padding: 0; border-radius: 11px; }
+.tx-product .tx-fallback-close { left: 270px; width: 80px; font-size: 14px; }
+.tx-product .tx-fallback-copy { left: 358px; width: 96px; font-size: 13px; background: #121211; color: #fbfaf8; border: 0; box-shadow: 0 5px 8px #00000024; }
+.tx-product.tx-dark .tx-fallback-copy { background: #f0eeeb; color: #1c1b1a; }
+.tx-product[lang="en"] .tx-fallback-copy { width: 113px; }
+.tx-product .tx-fallback-copy:hover:not(:disabled) { background: #121211; filter: none; }.tx-product.tx-dark .tx-fallback-copy:hover:not(:disabled) { background: #f0eeeb; }
+.tx-product .tx-fallback button.tx-fallback-close { border-radius: 12px; }
+.tx-product .tx-fallback-close:active:not(:disabled) { background: rgb(255 252 248 / .65); }
+.tx-product.tx-dark .tx-fallback-close:active:not(:disabled) { background: rgb(42 40 38 / .65); }
+.tx-product .tx-fallback-copy:active:not(:disabled) { background: rgb(18 18 17 / .78); }
+.tx-product.tx-dark .tx-fallback-copy:active:not(:disabled) { background: rgb(240 238 235 / .78); }

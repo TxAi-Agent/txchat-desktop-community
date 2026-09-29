@@ -1,0 +1,13 @@
+.tx-billing-usage{position:absolute;left:509px;top:382px;width:157px;height:90px}
+.tx-billing-allowance{position:absolute;left:2px;top:0;width:132px;height:20px;line-height:20px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:13px;color:var(--tx-text)}
+.tx-product .tx-billing-help{position:absolute;left:129px;top:-4px;width:28px;height:28px;min-height:28px;border:0;background:transparent;padding:7px;color:#d8b19b}
+.tx-product .tx-billing-help .tx-icon{width:14px;height:14px}
+.tx-billing-progress{position:absolute;left:0;top:31px;width:152px;height:6px;border-radius:99px;background:var(--tx-border);overflow:hidden}
+.tx-billing-progress span{position:absolute;left:1px;height:6px;border-radius:99px;background:var(--tx-accent)}
+.tx-product .tx-billing-action{position:absolute;left:0;top:54px;width:150px;height:36px;min-height:36px;padding:0;border:0;border-radius:8px;font-size:12px;font-weight:500;gap:4px}
+.tx-product .tx-billing-action .tx-icon{width:18px;height:18px}
+.tx-billing-popover{position:absolute;z-index:6;bottom:106px;right:-31px;box-sizing:border-box;width:330px;padding:20px;display:flex;flex-direction:column;gap:14px;border:1px solid var(--tx-border);border-radius:12px;background:var(--tx-raised);box-shadow:0 8px 28px #00000026}
+.tx-billing-popover::after{content:'';position:absolute;right:38px;bottom:-6px;width:10px;height:10px;transform:rotate(45deg);border-right:1px solid var(--tx-border);border-bottom:1px solid var(--tx-border);background:var(--tx-raised)}
+.tx-product .tx-billing-popover h2{font-size:15px;line-height:1.5;font-weight:500}
+.tx-billing-help-row{display:flex;gap:10px;align-items:flex-start}.tx-billing-help-row svg{flex:0 0 18px;width:18px;height:18px;fill:none;stroke:var(--tx-accent);stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}
+.tx-product .tx-billing-help-row h3{font-size:12px;font-weight:500;line-height:1.5;margin-bottom:3px}.tx-product .tx-billing-help-row p{font-size:11px;color:var(--tx-secondary);line-height:1.5}

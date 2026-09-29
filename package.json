@@ -1,0 +1,39 @@
+{
+  "name": "txchat-desktop-community",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Offline desktop dictation workbench with optional native input and audio adapters",
+  "license": "Apache-2.0",
+  "main": "dist/main.cjs",
+  "engines": {
+    "node": ">=24 <25"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "start": "npm run build && node scripts/start.mjs",
+    "build:native": "node scripts/build-native.mjs",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test tests/*.test.ts",
+    "test:desktop": "node --test tests/desktop.test.mjs",
+    "test:helper": "node --test tests/native-process.test.mjs",
+    "check:public": "node scripts/check-public.mjs",
+    "verify": "npm run typecheck && npm test && npm run build && npm run check:public"
+  },
+  "dependencies": {
+    "qrcode": "1.5.4",
+    "react": "19.3.0",
+    "react-dom": "19.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "24.13.5",
+    "@types/qrcode": "1.5.6",
+    "@types/react": "19.3.0",
+    "@types/react-dom": "19.3.0",
+    "electron": "44.4.2",
+    "esbuild": "0.28.2",
+    "node-api-headers": "1.9.0",
+    "playwright": "1.63.0",
+    "tsx": "4.23.13",
+    "typescript": "5.9.3"
+  }
+}

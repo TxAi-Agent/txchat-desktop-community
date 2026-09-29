@@ -1,0 +1,38 @@
+
+.tx-product:has(.tx-home) .tx-theme-select{display:none}
+.tx-product:has(.tx-home) .tx-window-options{top:16px;right:23px;height:20px}
+.tx-product:has(.tx-home) .tx-language{width:63px;justify-content:flex-end}
+.tx-product .tx-home .tx-account{top:79px;right:61px;width:150px;height:20px;min-height:20px;justify-content:flex-end}
+.tx-home .tx-account .tx-icon{width:14px;height:14px;color:var(--tx-accent)}
+.tx-home-status{top:138px;font-size:13px}
+.tx-product .tx-home-headline{top:169px;width:400px;font-size:36px;line-height:1.3;font-weight:700;letter-spacing:0}
+.tx-product[lang='en'] .tx-home-headline{top:169px;font-size:36px;letter-spacing:0}
+.tx-product .tx-home-instruction{top:222px;font-size:15px;line-height:1.5}
+.tx-home-key{top:302px;display:block}
+.tx-product .tx-home-key .tx-keycap{position:relative;isolation:isolate;display:inline-flex;align-items:center;justify-content:center;height:80px;min-height:80px;min-width:80px;padding:0 24px;border-radius:17px;border:1px solid #050505;background:linear-gradient(#2b2b2b,#090909);box-shadow:0 8px 18px #0003;color:#fbfaf8;font:400 28px -apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+.tx-home-key .tx-keycap::before{content:'';position:absolute;z-index:-1;inset:7px 8px 9px;border-radius:12px;background:linear-gradient(#323232,#1b1b1b);border:1px solid #ffffff66;box-shadow:inset 0 1px #ffffff1f}
+.tx-home-menu{top:189px;width:150px;height:176px;gap:0}
+.tx-product .tx-home-menu button{width:150px;height:44px;min-height:44px;font-size:14px;font-weight:400;justify-content:space-between;color:var(--tx-secondary)}
+.tx-product .tx-home-menu .tx-icon{width:18px;height:18px;color:var(--tx-accent)}
+.tx-product .tx-home-menu .tx-icon-dictionary{mask-size:22.222px}
+.tx-home-mode{width:180px;height:36px;padding:3px;border:1px solid var(--tx-border);border-radius:10px;background:var(--tx-raised);gap:0}
+.tx-product .tx-home-mode button{flex:1;min-height:28px;height:28px;min-width:0;padding:0;font-size:13px;font-weight:500;border-radius:8px}
+.tx-product .tx-home-mode button.is-selected{color:var(--tx-inverse-text);background:var(--tx-inverse);box-shadow:none}
+.tx-product .tx-home-mode-description{top:498px;width:400px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;line-height:1.5}
+.tx-home-setup{top:280px;display:flex;flex-direction:column;gap:28px}
+.tx-home-setup-row{display:flex;flex-direction:column;gap:10px}
+.tx-product .tx-home-setup-row h3{display:flex;align-items:center;gap:9px;font-size:14px;font-weight:400;line-height:20px}
+.tx-home-setup-row h3>span{color:#ff9500}
+.tx-home-setup-row>div{display:flex;align-items:center;gap:18px;white-space:nowrap;font-size:14px;color:var(--tx-secondary)}
+.tx-product .tx-home-setup-row button{min-height:40px;height:40px;font-size:13px;font-weight:500;padding:0 14px;border-radius:11px}
+.tx-home-setup-footer{position:absolute;left:59px;top:498px;width:602px;height:18px;color:var(--tx-tertiary);font-size:11px;line-height:18px;white-space:nowrap}
+.tx-home-setup-footer>div{display:inline}.tx-product .tx-home-setup-footer .tx-link{font-size:11px}
+.tx-product .tx-modal-permission{position:relative;width:480px;height:280px;min-height:280px;padding:0;border-radius:18px;background:var(--tx-canvas);overflow:hidden}
+.tx-modal-permission .tx-modal-heading{position:absolute;left:24px;top:96px;width:432px;height:34px;padding:0;border:0;display:block}
+.tx-product .tx-modal-permission .tx-modal-heading h2{width:100%;font-size:23px;font-weight:700;text-align:center;line-height:34px;white-space:nowrap;letter-spacing:0}
+.tx-modal-permission .tx-close{display:none}
+.tx-modal-permission .tx-modal-body{position:static;padding:0;overflow:visible}
+.tx-modal-permission .tx-brand-symbol{position:absolute;left:212px;top:24px;width:56px;height:56px}
+.tx-product .tx-modal-permission .tx-modal-body p{position:absolute;left:30px;top:138px;width:420px;height:46px;margin:0;font-size:16px;line-height:23px;text-align:center;color:var(--tx-secondary)}
+.tx-product .tx-modal-permission .tx-modal-footer{position:absolute;top:200px;left:0;width:480px;height:40px;min-height:40px;margin:0;padding:0;border:0;justify-content:center;gap:10px;background:transparent}
+.tx-product .tx-modal-permission .tx-modal-footer button{font-size:13px;min-height:40px;height:40px;padding:0 14px;line-height:1.35}

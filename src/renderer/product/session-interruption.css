@@ -1,0 +1,22 @@
+.tx-session-interruption { position: relative; width: 720px; height: 560px; }
+.tx-session-language { position: absolute; left: 634px; top: 17px; display: flex; align-items: center; gap: 5px; color: var(--tx-secondary); font-size: 12px; }.tx-session-language .tx-icon { width: 12px; height: 12px; color: #c99579; }
+.tx-session-brand { position: absolute; left: 60px; top: 62px; width: 56px; height: 56px; }
+.tx-session-account { position: absolute; left: 560px; top: 81px; width: 100px; font-size: 11px; text-align: right; color: var(--tx-tertiary); }
+.tx-session-status { position: absolute; left: 60px; top: 139px; height: 20px; display: flex; align-items: center; gap: 12px; color: var(--tx-secondary); font-size: 13px; }
+.tx-session-status i { width: 8px; height: 8px; border-radius: 50%; background: #b82924; }
+.tx-product .tx-session-interruption h1 { position: absolute; left: 60px; top: 170px; width: 638px; height: 44px; line-height: 44px; font-size: 36px; font-weight: 700; }
+.tx-product .tx-session-detail { position: absolute; left: 60px; top: 223px; width: 430px; height: 23px; line-height: 23px; font-size: 15px; color: var(--tx-secondary); }
+.tx-session-illustration { position: absolute; left: 60px; top: 255px; background-position: center; background-repeat: no-repeat; background-size: contain; }
+.tx-session-illustration.is-conflict { width: 180px; height: 148px; background-image: url('./assets/TxChat-Logo-Symbol-Light.svg'); }.tx-dark .tx-session-illustration.is-conflict { background-image: url('./assets/TxChat-Logo-Symbol-Dark.svg'); }
+.tx-session-illustration.is-expired { width: 170px; height: 155px; background-image: url('./assets/TxChat-Logo-Symbol-Light.svg'); }.tx-dark .tx-session-illustration.is-expired { background-image: url('./assets/TxChat-Logo-Symbol-Dark.svg'); }
+.tx-product .tx-session-login { position: absolute; left: 60px; top: 426px; width: 144px; height: 47px; padding: 0; border: 0; border-radius: 10px; font-size: 14px; background: #121211; color: #fbfaf8; }.tx-product.tx-dark .tx-session-login { background: #f0eeeb; color: #1c1b1a; }
+.tx-product .tx-session-login:active:not(:disabled) { background: rgb(18 18 17 / .78); filter: none; }.tx-product.tx-dark .tx-session-login:active:not(:disabled) { background: rgb(240 238 235 / .78); }
+.tx-session-menu { position: absolute; left: 510px; top: 253px; width: 150px; height: 176px; }
+.tx-product .tx-session-menu button { width: 150px; height: 44px; padding: 0; display: flex; justify-content: space-between; border: 0; border-radius: 0; color: var(--tx-secondary); background: transparent; font-size: 14px; font-weight: 400; }
+.tx-product .tx-session-menu button:hover { background: transparent; }.tx-session-menu .tx-icon { width: 18px; height: 18px; color: #c99579; }
+.tx-session-menu .tx-icon-dictionary { mask-size: 22.222px; overflow: visible; }
+
+.tx-product .tx-session-login:hover:not(:disabled) { background: #121211; filter: none; }.tx-product.tx-dark .tx-session-login:hover:not(:disabled) { background: #f0eeeb; }
+.tx-product .tx-session-login:active:not(:disabled) { background: rgb(18 18 17 / .78); }.tx-product.tx-dark .tx-session-login:active:not(:disabled) { background: rgb(240 238 235 / .78); }
+
+.tx-session-illustration { background-size: 80px 80px; background-repeat: no-repeat; background-position: center; }

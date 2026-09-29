@@ -1,0 +1,13 @@
+import { build } from 'esbuild';
+import { mkdir, copyFile, rm } from 'node:fs/promises';
+import { fileURLToPath } from 'node:url';
+import path from 'node:path';
+const root=fileURLToPath(new URL('../',import.meta.url));
+await rm(path.join(root,'dist'),{recursive:true,force:true});
+await mkdir(path.join(root,'dist/renderer'),{recursive:true});
+const common={absWorkingDir:root,bundle:true,sourcemap:false,logLevel:'silent',legalComments:'eof'};
+await build({...common,entryPoints:['src/main/index.ts'],outfile:'dist/main.cjs',platform:'node',target:'node24',format:'cjs',external:['electron']});
+await build({...common,entryPoints:['src/preload/index.ts'],outfile:'dist/preload.cjs',platform:'node',target:'node24',format:'cjs',external:['electron']});
+await build({...common,entryPoints:['src/renderer/index.tsx'],outfile:'dist/renderer/index.js',platform:'browser',target:'chrome136',format:'iife',loader:{'.svg':'dataurl'},define:{'process.env.NODE_ENV':'"production"'},minify:true});
+await copyFile(path.join(root,'src/renderer/index.html'),path.join(root,'dist/renderer/index.html'));
+console.log('Built desktop main, sandboxed preload, and local renderer.');

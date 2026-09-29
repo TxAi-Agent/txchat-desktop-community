@@ -1,0 +1,33 @@
+.tx-product .tx-modal-payment { position: relative; width: 560px; height: 530px; max-height: none; padding: 0; display: block; overflow: hidden; background: #fbfaf8; border: 1px solid #ded8d0; border-radius: 16px; color: #111; --payment-secondary: #707070; --payment-border: #ded8d0; --payment-warning: #c77d29; --payment-inverse: #171615; --payment-on-inverse: #fbfaf8; }
+.tx-product.tx-dark .tx-modal-payment { background: #171615; --payment-warning: #d69450; border-color: #3a3733; color: #fbfaf8; --payment-secondary: #a9a29a; --payment-border: #3a3733; --payment-inverse: #fffcf8; --payment-on-inverse: #111; }
+.tx-modal-payment .tx-modal-heading { position: absolute; left: 39px; top: 28px; width: 480px; height: 32px; padding: 0; margin: 0; display: block; }
+.tx-product .tx-modal-payment .tx-modal-heading h2 { width: 480px; height: 32px; font-size: 23px; font-weight: 700; line-height: 32px; text-align: center; }
+.tx-product .tx-modal-payment .tx-modal-body { position: absolute; inset: 0; overflow: visible; padding: 0; margin: 0; max-height: none; }
+.tx-payment-divider { position: absolute; left: 39px; top: 78px; width: 480px; height: 1px; background: var(--payment-border); }
+.tx-product .tx-payment-product { position: absolute; left: 39px; top: 109px; width: 300px; height: 26px; font-size: 17px; font-weight: 500; line-height: 26px; white-space: nowrap; overflow: hidden; }
+.tx-product .tx-modal-payment .tx-payment-description { position: absolute; left: 39px; top: 139px; width: 300px; height: 18px; margin: 0; font-size: 12px; color: var(--payment-secondary); line-height: 18px; white-space: nowrap; }
+.tx-product .tx-modal-payment .tx-payment-description.has-warning { height: 36px; white-space: normal; color: var(--payment-warning); }
+.tx-product .tx-modal-payment .tx-payment-amount { position: absolute; left: 360px; top: 112px; width: 160px; height: 44px; display: flex; align-items: baseline; justify-content: flex-end; gap: 2px; white-space: nowrap; font-weight: 400; margin: 0; }
+.tx-payment-amount span { font-size: 24px; }.tx-payment-amount strong { font-size: 36px; font-weight: 700; line-height: 44px; }
+.tx-payment-graphic { position: absolute; left: 179px; top: 183px; width: 200px; height: 200px; display: flex; justify-content: center; align-items: flex-start; color: var(--payment-warning); }
+.tx-payment-graphic img { border: 1px solid var(--payment-border); width: 200px; height: 200px; }
+.tx-payment-graphic.is-success { color: #31a853; }
+.tx-payment-glyph { width: 72px; height: 72px; border-radius: 50%; background: color-mix(in srgb, currentColor 12%, transparent); display: grid; place-items: center; }
+.tx-payment-glyph svg { width: 30px; height: 30px; fill: none; stroke: currentColor; stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; }
+.tx-payment-glyph.is-busy svg { animation: tx-payment-spin 1.2s linear infinite; }
+.tx-payment-glyph.is-terminal svg { animation: tx-payment-bounce .4s ease-out; }
+.tx-payment-feedback { position: absolute; left: 79px; top: 275px; width: 400px; height: 94px; text-align: center; }
+.tx-product .tx-payment-feedback h4 { height: 22px; margin: 0; font: 500 15px/22px system-ui, sans-serif; }
+.tx-product .tx-modal-payment .tx-payment-feedback p { height: 36px; margin: 4px 0; font-size: 12px; line-height: 18px; color: var(--payment-secondary); }
+.tx-product .tx-modal-payment .tx-payment-inline { padding: 0; margin: 0; height: 22px; min-height: 22px; font-size: 12px; line-height: 22px; border: 0; background: transparent; color: #c99579; }
+.tx-payment-scan-action { position: absolute; left: 79px; top: 413px; width: 400px; height: 22px; text-align: center; }
+.tx-product .tx-modal-payment .tx-payment-countdown { position: absolute; left: 39px; top: 388px; width: 480px; height: 22px; margin: 0; font-size: 14px; line-height: 22px; text-align: center; color: var(--payment-secondary); }
+.tx-product .tx-modal-payment .tx-payment-order-reference { font-size: 12px; }
+.tx-product .tx-modal-payment .tx-payment-close { position: absolute; left: 198px; top: 438px; width: 160px; height: 44px; padding: 0; border: 0; border-radius: 11px; background: var(--payment-inverse); color: var(--payment-on-inverse); }
+.tx-product .tx-modal-payment .tx-payment-close:hover:not(:disabled) { background: var(--payment-inverse); }
+.tx-product .tx-modal-payment .tx-payment-close:active { opacity: .74; }
+@keyframes tx-payment-spin { to { transform: rotate(360deg); } }
+@keyframes tx-payment-bounce { 0%, 100% { transform: scale(1); } 40% { transform: scale(1.16); } 70% { transform: scale(.96); } }
+@media (prefers-reduced-motion: reduce) { .tx-payment-glyph.is-busy svg, .tx-payment-glyph.is-terminal svg { animation: none; } }
+.tx-modal-layer:has(> .tx-modal-payment) { padding: 0; }
+.tx-product .tx-modal-payment { flex-shrink: 0; }

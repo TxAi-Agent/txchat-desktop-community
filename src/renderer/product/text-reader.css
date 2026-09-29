@@ -1,0 +1,13 @@
+.tx-product .tx-modal-reader { position: relative; flex-shrink: 0; width: 620px; height: 460px; max-height: none; padding: 0; overflow: hidden; display: block; background: var(--tx-raised); border: 0; border-radius: 16px; box-shadow: inset 0 0 0 1px var(--tx-border), 0 16px 20px #00000029; }
+.tx-modal-reader .tx-modal-heading { position: absolute; left: 27px; top: 19px; width: 520px; height: 32px; padding: 0; margin: 0; }
+.tx-product .tx-modal-reader .tx-modal-heading h2 { font-size: 23px; font-weight: 700; line-height: 32px; white-space: nowrap; overflow: hidden; }
+.tx-product .tx-modal-reader .tx-modal-body { position: absolute; inset: 0; padding: 0; margin: 0; max-height: none; overflow: visible; }
+.tx-reader-scroll { position: absolute; left: 27px; top: 67px; width: 564px; height: 310px; padding: 10px 15px 15px; overflow-y: auto; display: flex; flex-direction: column; align-items: stretch; gap: 5px; background: var(--tx-canvas); border-radius: 10px; box-shadow: inset 0 0 0 1px var(--tx-border); }
+.tx-product .tx-reader-scroll h3 { font-size: 15px; line-height: 24px; font-weight: 500; color: var(--tx-text); white-space: pre-wrap; flex-shrink: 0; }
+.tx-product .tx-reader-scroll p { font-size: 14px; line-height: 24px; color: var(--tx-secondary); white-space: pre-wrap; flex-shrink: 0; }
+.tx-product .tx-modal-reader .tx-modal-footer { position: absolute; left: 499px; top: 393px; width: 92px; height: 42px; padding: 0; margin: 0; border: 0; }
+.tx-product .tx-modal-reader .tx-modal-footer button { width: 92px; height: 42px; min-height: 42px; padding: 0; font-size: 13px; border-radius: 11px; border: 0; background: #121211; color: #fbfaf8; box-shadow: 0 5px 8px #00000024; }
+.tx-product.tx-dark .tx-modal-reader .tx-modal-footer button { background: #f0eeeb; color: #1c1b1a; }
+.tx-product .tx-modal-reader .tx-modal-footer button:active { background: rgb(18 18 17 / .78); filter: none; }.tx-product.tx-dark .tx-modal-reader .tx-modal-footer button:active { background: rgb(240 238 235 / .78); }
+.tx-reader-scroll:focus-visible { outline: 0; }
+.tx-reader-scroll:focus-visible[data-auto-focus] { outline: 0; }

@@ -1,0 +1,15 @@
+body:has(.tx-diagnostic-window) { background: transparent; }
+.tx-product.tx-diagnostic-window { width: 480px; height: 280px; border-radius: 18px; background: #fffcf8; color: #111; --diagnostic-secondary: #707070; --diagnostic-border: #ded8d0; --diagnostic-inverse: #171615; --diagnostic-on-inverse: #fbfaf8; --diagnostic-success: #2f8a4c; --diagnostic-danger: #c94a45; }
+.tx-product.tx-diagnostic-window.tx-dark { background: #211f1d; color: #fbfaf8; --diagnostic-secondary: #a9a29a; --diagnostic-border: #3a3733; --diagnostic-inverse: #fffcf8; --diagnostic-on-inverse: #111; --diagnostic-success: #65b979; --diagnostic-danger: #e1736e; }
+.tx-diagnostic { position: relative; width: 480px; height: 280px; border-radius: 18px; box-shadow: inset 0 0 0 1px var(--diagnostic-border); }
+.tx-product .tx-diagnostic h1 { position: absolute; left: 27px; top: 27px; width: 424px; height: 32px; font-size: 23px; line-height: 24px; font-weight: 700; white-space: nowrap; -webkit-app-region: drag; }
+.tx-diagnostic h1.is-success { color: var(--diagnostic-success); }.tx-diagnostic h1.is-danger { color: var(--diagnostic-danger); }
+.tx-product .tx-diagnostic-body { position: absolute; left: 27px; top: 81px; width: 424px; height: 52px; font-size: 14px; line-height: 21px; color: var(--diagnostic-secondary); user-select: text; }
+.tx-product .tx-diagnostic-caption { position: absolute; left: 27px; top: 141px; width: 424px; height: 40px; font-size: 12px; line-height: 17px; color: var(--diagnostic-secondary); }
+.tx-diagnostic footer { position: absolute; left: 27px; top: 209px; width: 424px; height: 44px; display: flex; gap: 12px; justify-content: flex-end; }
+.tx-product .tx-diagnostic button { width: 116px; height: 44px; padding: 0; min-height: 44px; border: 1px solid var(--diagnostic-border); border-radius: 11px; background: transparent; color: inherit; }
+.tx-product .tx-diagnostic button.tx-primary { border: 0; background: var(--diagnostic-inverse); color: var(--diagnostic-on-inverse); }.tx-product .tx-diagnostic button.is-sending { width: 132px; }
+.tx-product .tx-diagnostic button[data-auto-focus]:focus-visible { outline: 0; }
+.tx-product .tx-diagnostic button:hover:not(:disabled) { background: transparent; border-color: var(--diagnostic-border); filter: none; }.tx-product .tx-diagnostic button.tx-primary:hover:not(:disabled) { background: var(--diagnostic-inverse); }
+
+.tx-diagnostic-apostrophe { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; font-size: 23px; font-weight: 700; }
