@@ -12,11 +12,13 @@ test('full desktop exposes unconfigured services and preserves local features ac
   let desktop;
   t.after(async () => { if (desktop) await desktop.close(); await rm(profile, { recursive: true, force: true }); });
   const launch = async () => {
+    console.info('Desktop check: launching application');
     const env = { ...process.env, TXCHAT_COMMUNITY_PROFILE: profile, TXCHAT_COMMUNITY_NO_NATIVE: '1' };
     delete env.ELECTRON_RUN_AS_NODE;
-    desktop = await electron.launch({ args: [root], env, chromiumSandbox: true });
+    desktop = await electron.launch({ args: [root], env, chromiumSandbox: true, timeout: 30_000 });
     const page = await desktop.firstWindow();
     await page.getByTestId('setup.unavailable').waitFor();
+    console.info('Desktop check: unconfigured setup is visible');
     return page;
   };
   let page = await launch();
@@ -41,6 +43,7 @@ test('full desktop exposes unconfigured services and preserves local features ac
   assert.ok((await page.locator('body').innerText()).includes('service'));
   await command({ type: 'demo-enter' });
   await page.getByRole('button', { name: 'Local development', exact: false }).waitFor();
+  console.info('Desktop check: local client is visible');
   assert.equal((await read()).product.stage, 'ready');
   assert.equal((await read()).product.auth.signedIn, false);
   assert.equal((await read()).product.auth.demo, true);
@@ -64,6 +67,7 @@ test('full desktop exposes unconfigured services and preserves local features ac
   assert.equal((await read()).product.update.visible, true);
   await updatePage.getByRole('button', { name: 'Close', exact: true }).last().click();
   assert.equal((await read()).product.update.visible, false);
+  console.info('Desktop check: closing before persistence verification');
   await desktop.close(); desktop = undefined;
   page = await launch();
   assert.equal((await read()).product.preferences.theme, 'dark');
@@ -71,4 +75,5 @@ test('full desktop exposes unconfigured services and preserves local features ac
   await page.getByRole('button', { name: 'Local development', exact: false }).waitFor();
   assert.deepEqual((await read()).product.dictionary.entries, [{ wrong: 'alpha', correct: 'beta', enabled: true }]);
   assert.equal((await read()).helper.status, 'stopped');
+  console.info('Desktop check: restart persistence verified');
 });

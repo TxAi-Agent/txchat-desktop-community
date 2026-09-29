@@ -33,6 +33,9 @@ jobs:
       - run: npm ci
       - run: npm run verify
       - run: npm audit --audit-level=low
+      - name: Prepare Electron runtime
+        run: node node_modules/electron/install.js
+        timeout-minutes: 5
       - run: npm run build:native
         if: runner.os != 'Linux'
       - run: npm run test:helper
