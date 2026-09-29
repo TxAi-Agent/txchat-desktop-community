@@ -1,4 +1,4 @@
-# TxChat Desktop Community
+# TxChat Desktop
 
 [English](README.md)
 

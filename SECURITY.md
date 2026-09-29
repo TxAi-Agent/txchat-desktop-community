@@ -4,7 +4,7 @@
 
 ## Report a vulnerability privately
 
-Use [GitHub private vulnerability reporting](https://github.com/TxAi-Agent/txchat-desktop-community/security/advisories/new) for this repository. GitHub explains the reporting process in its [private reporting guide](https://docs.github.com/en/code-security/how-tos/report-and-fix-vulnerabilities/report-privately).
+Use [GitHub private vulnerability reporting](https://github.com/TxAi-Agent/TxChat-Desktop/security/advisories/new) for this repository. GitHub explains the reporting process in its [private reporting guide](https://docs.github.com/en/code-security/how-tos/report-and-fix-vulnerabilities/report-privately).
 
 Do not disclose vulnerabilities, credentials, tokens, personal data, or sensitive recordings in a public issue, pull request, discussion, or attachment. If the private reporting form is unavailable, a public issue may ask only for a private reporting channel; include no vulnerability details or sensitive data.
 

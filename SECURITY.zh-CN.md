@@ -4,7 +4,7 @@
 
 ## 私密报告漏洞
 
-请使用本仓库的 [GitHub 私密漏洞报告](https://github.com/TxAi-Agent/txchat-desktop-community/security/advisories/new)。操作方式见 [GitHub 私密报告指南](https://docs.github.com/en/code-security/how-tos/report-and-fix-vulnerabilities/report-privately)。
+请使用本仓库的 [GitHub 私密漏洞报告](https://github.com/TxAi-Agent/TxChat-Desktop/security/advisories/new)。操作方式见 [GitHub 私密报告指南](https://docs.github.com/en/code-security/how-tos/report-and-fix-vulnerabilities/report-privately)。
 
 不要在公开 issue、Pull Request、讨论或附件中披露漏洞细节、凭据、令牌、个人数据或敏感录音。如果私密报告表单不可用，公开 issue 只能询问私密报告渠道，不得包含漏洞细节或敏感数据。
 
