@@ -6,7 +6,8 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { _electron as electron } from 'playwright';
 
-const root = fileURLToPath(new URL('../', import.meta.url));
+// Remove the trailing separator before Playwright quotes the Windows shell argument.
+const root = path.resolve(fileURLToPath(new URL('../', import.meta.url)));
 test('full desktop exposes unconfigured services and preserves local features across restart', { timeout: 90_000 }, async t => {
   const profile = await realpath(await mkdtemp(path.join(os.tmpdir(), 'community-desktop-')));
   let desktop;
